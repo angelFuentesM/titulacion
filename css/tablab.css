@@ -1,0 +1,39 @@
+
+table {	
+	text-align: left;
+	font-size: 14px;
+	margin: auto;
+	width: 100%;
+}
+
+table td {
+	font-size: 14px;
+	border: 1px solid #F5F5F5;
+	padding: 6px;
+}
+
+table tr:hover {
+	background: #ffeeba;
+}
+thead{
+	background: #E9ECEF;
+	border-bottom: solid 2px #CFCFCF;
+	padding: 6px;
+}
+
+table th {
+	padding: 6px;
+}
+
+.barra{
+height: 280px;
+overflow: scroll;
+}
+
+
+
+
+
+
+
+

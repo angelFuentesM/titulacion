@@ -1,0 +1,126 @@
+.leyenda{
+  color: rgb(59, 59, 59);
+  font-size: 16px;
+  font-weight: bold;
+  
+}
+
+span.numero{
+	background: rgb(161, 0, 0);
+	border-radius: 0.8em;
+	-moz-border-radius: 0.8em;
+	-webkit-border-radius: 0.8em;
+	color: #ffffff;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 1.6em;
+	margin-right: 15px;
+	text-align: center;
+	width: 1.6em; 
+
+}
+
+
+span.indicador{
+	background: rgb(161, 0, 0);
+	border-radius: 0.8em;
+	-moz-border-radius: 0.8em;
+	-webkit-border-radius: 0.8em;
+	color: #ffffff;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 1.6em;
+	margin-right: 15px;
+	text-align: center;
+	width: 1.6em; 
+}
+
+footer {
+
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: rgb(161, 0, 0);
+	color: #ffffff;
+	text-align: center;
+}
+
+.nini{
+
+	transition: all 300ms; 
+}
+
+.intro {
+	width: 100%;
+    height: 100%;
+    background: url("imagenes/lake-lucerne-3840x2400-switzerland-landscape-lake-mountain-4k-15261.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: table;
+    top: 0;
+}
+
+.inner {
+	display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.content {
+	width: 20vw;
+    height: 47vh;
+    background: rgba(255,255,255,0.39);
+    margin: auto;
+    border-radius: 1%;
+    display: table;
+}
+
+.photo {
+	display: block;
+    width: 10%;
+    height: 10%;
+    margin: auto;
+    border: 2px solid #726b6b;
+    border-radius: 100%;
+}
+
+.pepe{
+	width: 100%;
+}
+
+.estilo{
+
+	display: block;
+    border: none;
+    color: rgb(71, 71, 71);
+    background: transparent;
+    border-bottom: 1px dotted black;
+	padding: 0px 2px 2px 2px;
+	width: 100%;
+	font-size: 14px;
+
+
+}
+
+.estparrafo{
+	font-style: italic;
+	padding: 12px 0px 0px 0px;
+	font-size: 14px;
+	color: rgb(151, 150, 150);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+
+table{	
+	text-align: left;
+	margin: auto;
+	width: 100%;
+
+}
+
+table td{
+	border: 1px solid #F5F5F5;
+	padding: 6px;
+}
+
+table tr:hover {
+	background: #ffeeba;
+}
+thead{
+	background: #E9ECEF;
+	border-bottom: solid 2px #CFCFCF;
+	padding: 6px;
+}
+
+table th {
+	padding: 6px;
+}
+
+.barra{
+width: 100%;
+height: 100%;
+overflow:none;
+
+
+}
+
+.iconprint{
+
+	display:none;
+}
+
+.logo
+{
+	line-height: 100px;
+	width: 97%;
+	margin-bottom: 5px;
+}
+
+
+
+

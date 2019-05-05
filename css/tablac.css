@@ -1,0 +1,31 @@
+
+
+table{	
+	text-align: left;
+	margin: auto;
+	width: 100%;
+	font-size: 14px;
+}
+
+table td{
+	border: 1px solid #F5F5F5;
+	padding: 3px;
+}
+
+table tr:hover {
+	background: #ffeeba;
+}
+thead{
+	background: #E9ECEF;
+	border-bottom: solid 2px #CFCFCF;
+	padding: 3px;
+}
+
+table th {
+	padding: 3px;
+}
+
+.barra{
+height: 100%;
+overflow: scroll;
+}
