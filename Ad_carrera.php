@@ -128,6 +128,7 @@ require 'conexion.php';
                       <td>
                         <span  class="modificar" style=" color:green; cursor: pointer;" id="<?php echo $mostrarusuarios['IdCarrera']; ?>">Editar
                         </span >
+                        |
                         <span class="eliminar" style="color:red; cursor: pointer;" id="<?php echo $mostrarusuarios['IdCarrera']; ?>">Borrar
                         </span>
                       </td>

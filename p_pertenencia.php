@@ -7,25 +7,25 @@ if (isset($_POST['buscar'])) {
     //Consulta Pertenencia  Muy buena /////pp1 /////
     $con = "SELECT per.pp1,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp1='MB' AND ciclo= '$filtro'";
+    WHERE pp1='Muy Buena' AND ciclo= '$filtro'";
     $re = $conexion->query($con);
     $pp1mb = $re->num_rows;
     //Consulta Pertenencia Buena//
     $con1 = "SELECT per.pp1,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp1='B' AND ciclo= '$filtro'";
+    WHERE pp1='Buena' AND ciclo= '$filtro'";
     $re1 = $conexion->query($con1);
     $pp1b = $re1->num_rows;
     //Consulta Pertenencia Regular//
     $con2 = "SELECT per.pp1,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp1='R' AND ciclo= '$filtro'";
+    WHERE pp1='Regular' AND ciclo= '$filtro'";
     $re2 = $conexion->query($con2);
     $pp1r = $re2->num_rows;
     //Consulta Pertenencia Mala//
     $con3 = "SELECT per.pp1,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp1='M' AND ciclo= '$filtro'";
+    WHERE pp1='Mala' AND ciclo= '$filtro'";
     $re3 = $conexion->query($con3);
     $pp1m = $re3->num_rows;
 
@@ -34,25 +34,25 @@ if (isset($_POST['buscar'])) {
     //Consulta Pertenencia  Muy buena /////pp2 /////
     $con4 = "SELECT per.pp2,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp2='MB' AND ciclo= '$filtro'";
+    WHERE pp2='Muy Buenos' AND ciclo= '$filtro'";
     $re4 = $conexion->query($con4);
     $pp2mb = $re4->num_rows;
     //Consulta Pertenencia Buena//
     $con5 = "SELECT per.pp2,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp2='B' AND ciclo= '$filtro'";
+    WHERE pp2='Buenos' AND ciclo= '$filtro'";
     $re5 = $conexion->query($con5);
     $pp2b = $re5->num_rows;
     //Consulta Pertenencia Regular//
     $con6 = "SELECT per.pp2,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp2='R' AND ciclo= '$filtro'";
+    WHERE pp2='Regulares' AND ciclo= '$filtro'";
     $re6 = $conexion->query($con6);
     $pp2r = $re6->num_rows;
     //Consulta Pertenencia Mala//
     $con7 = "SELECT per.pp2,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp2='M' AND ciclo= '$filtro'";
+    WHERE pp2='Malos' AND ciclo= '$filtro'";
     $re7 = $conexion->query($con7);
     $pp2m = $re7->num_rows;
 
@@ -61,25 +61,25 @@ if (isset($_POST['buscar'])) {
     //Consulta Pertenencia  Muy buena /////pp3 /////
 $con8 = "SELECT per.pp3,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp3='MB' AND ciclo= '$filtro'";
+    WHERE pp3='Muy Buena' AND ciclo= '$filtro'";
 $re8 = $conexion->query($con8);
 $pp3mb = $re8->num_rows;
 //Consulta Pertenencia Buena//
 $con9 = "SELECT per.pp3,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp3='B' AND ciclo= '$filtro'";
+    WHERE pp3='Buena' AND ciclo= '$filtro'";
 $re9 = $conexion->query($con9);
 $pp3b = $re9->num_rows;
 //Consulta Pertenencia Regular//
 $con10 = "SELECT per.pp3,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp3='R' AND ciclo= '$filtro'";
+    WHERE pp3='Regular' AND ciclo= '$filtro'";
 $re10 = $conexion->query($con10);
 $pp3r = $re10->num_rows;
 //Consulta Pertenencia Mala//
 $con11 = "SELECT per.pp3,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp3='M' AND ciclo= '$filtro'";
+    WHERE pp3='Mala' AND ciclo= '$filtro'";
 $re11 = $conexion->query($con11);
 $pp3m = $re11->num_rows;
 
@@ -88,25 +88,25 @@ $sumpp3 = $pp2mb + $pp2b + $pp2r + $pp2m; //Suma horizontal pp3//
 //Consulta Pertenencia  Muy buena /////pp4 /////
 $con12 = "SELECT per.pp4,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp4='MB' AND ciclo= '$filtro'";
+    WHERE pp4='Muy Buena' AND ciclo= '$filtro'";
 $re12 = $conexion->query($con12);
 $pp4mb = $re12->num_rows;
 //Consulta Pertenencia Buena//
 $con13 = "SELECT per.pp4,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp4='B' AND ciclo= '$filtro'";
+    WHERE pp4='Buena' AND ciclo= '$filtro'";
 $re13 = $conexion->query($con13);
 $pp4b = $re13->num_rows;
 //Consulta Pertenencia Regular//
 $con14 = "SELECT per.pp4,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp4='R' AND ciclo= '$filtro'";
+    WHERE pp4='Regular' AND ciclo= '$filtro'";
 $re14 = $conexion->query($con14);
 $pp4r = $re14->num_rows;
 //Consulta Pertenencia Mala//
 $con15 = "SELECT per.pp4,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp4='M' AND ciclo= '$filtro'";
+    WHERE pp4='Mala' AND ciclo= '$filtro'";
 $re15 = $conexion->query($con15);
 $pp4m = $re15->num_rows;
 
@@ -115,25 +115,25 @@ $sumpp4 = $pp4mb + $pp4b + $pp4r + $pp4m; //Suma horizontal pp4//
 //Consulta Pertenencia  Muy buena /////pp5 /////
 $con16 = "SELECT per.pp5,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp5='MB' AND ciclo= '$filtro'";
+    WHERE pp5='Muy Buena' AND ciclo= '$filtro'";
 $re16 = $conexion->query($con16);
 $pp5mb = $re16->num_rows;
 //Consulta Pertenencia Buena//
 $con17 = "SELECT per.pp5,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp5='B' AND ciclo= '$filtro'";
+    WHERE pp5='Buena' AND ciclo= '$filtro'";
 $re17 = $conexion->query($con17);
 $pp5b = $re17->num_rows;
 //Consulta Pertenencia Regular//
 $con18 = "SELECT per.pp5,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp5='R' AND ciclo= '$filtro'";
+    WHERE pp5='Regular' AND ciclo= '$filtro'";
 $re18 = $conexion->query($con18);
 $pp5r = $re18->num_rows;
 //Consulta Pertenencia Mala//
 $con19 = "SELECT per.pp5,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp5='M' AND ciclo= '$filtro'";
+    WHERE pp5='Mala' AND ciclo= '$filtro'";
 $re19 = $conexion->query($con19);
 $pp5m = $re19->num_rows;
 
@@ -142,25 +142,25 @@ $sumpp5 = $pp5mb + $pp5b + $pp5r + $pp5m; //Suma horizontal pp5//
 //Consulta Pertenencia  Muy buena /////pp6 /////
 $con20 = "SELECT per.pp6,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp6='MB' AND ciclo= '$filtro'";
+    WHERE pp6='Muy Buena' AND ciclo= '$filtro'";
 $re20 = $conexion->query($con20);
 $pp6mb = $re20->num_rows;
 //Consulta Pertenencia Buena//
 $con21 = "SELECT per.pp6,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp6='B' AND ciclo= '$filtro'";
+    WHERE pp6='Buena' AND ciclo= '$filtro'";
 $re21 = $conexion->query($con21);
 $pp6b = $re21->num_rows;
 //Consulta Pertenencia Regular//
 $con22 = "SELECT per.pp6,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp6='R' AND ciclo= '$filtro'";
+    WHERE pp6='Regular' AND ciclo= '$filtro'";
 $re22 = $conexion->query($con22);
 $pp6r = $re22->num_rows;
 //Consulta Pertenencia Mala//
 $con23 = "SELECT per.pp6,egre.ciclo FROM Pertenencia per
     INNER JOIN egresado egre ON per.egresadoId =egre.egresadoId
-    WHERE pp6='M' AND ciclo= '$filtro'";
+    WHERE pp6='Mala' AND ciclo= '$filtro'";
 $re23 = $conexion->query($con23);
 $pp6m = $re23->num_rows;
 

@@ -6,10 +6,11 @@ table {
 	width: 100%;
 }
 
-table td {
-	font-size: 14px;
+table tr td {
+	text-align: center;	
+	font-size: 13px;
 	border: 1px solid #F5F5F5;
-	padding: 6px;
+	padding: 2px;
 }
 
 table tr:hover {
@@ -22,13 +23,11 @@ thead{
 }
 
 table th {
+	text-align: center;
 	padding: 6px;
 }
 
-.barra{
-height: 280px;
-overflow: scroll;
-}
+
 
 
 

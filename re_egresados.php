@@ -3,12 +3,13 @@
 require 'conexion.php';
 
 switch ("$_POST[opc]") {
-  case "guardar":
+  ////////////GUARDAR////////////
+  case "guardar": 
 
   try {
 
-    $sql = $conexion->prepare ("INSERT INTO usuarios(Upaterno,Umaterno,Unombre,nucontrol,Ucarrera,Ucorreo,privilegio,Uciclo)
-      VALUES('".$_POST['Upaterno']."','".$_POST['Umaterno']."','".$_POST['Unombre']."','".$_POST['nucontrol']."','".$_POST['Ucarrera']."','".$_POST['Ucorreo']."','".$_POST['privilegio']."','".$_POST['Uciclo']."')");        
+    $sql = $conexion->prepare ("INSERT INTO usuarios(Upaterno,Umaterno,Unombre,nucontrol,Ucarrera,Ucorreo,privilegio,Uciclo,status)
+      VALUES('".$_POST['Upaterno']."','".$_POST['Umaterno']."','".$_POST['Unombre']."','".$_POST['nucontrol']."','".$_POST['Ucarrera']."','".$_POST['Ucorreo']."','".$_POST['privilegio']."','".$_POST['Uciclo']."','".$_POST['status']."')");        
     $sql->execute();   
 
     header("location:Ad_egresados.php"); 
@@ -18,7 +19,7 @@ switch ("$_POST[opc]") {
     die();
   }
   break;
-
+  ////////////ELIMINAR////////////
   case "eliminar":
   try {
 
@@ -30,7 +31,7 @@ switch ("$_POST[opc]") {
     die();
   }
   break;
-
+  ////////////MODIFICAR////////////
   case "modificar-form":
   try {
    $sql = $conexion->prepare("SELECT * FROM usuarios WHERE usuariosId=".$_POST['clave']);
@@ -64,24 +65,28 @@ switch ("$_POST[opc]") {
             <select class="custom-select custom-select-sm " id="Ucarrera" name="Ucarrera">
               <option value="">Asigne la Carrera</option>
               <?php
-                          //$consultacarrera = "SELECT * FROM carrera";
-                          //$resultadocarrera = $conexion->query($consultacarrera);
-                          //while ($regCarrera = $resultadocarrera->fetch_array(MYSQLI_BOTH)) {
-                          //echo '<option value="' . $regCarrera['nombreCarrera'] . '">' . $regCarrera['nombreCarrera'] . '</option>';}
+              require 'conexion.php';
+              $consultacarrera = "SELECT * FROM carrera";
+              $resultadocarrera = $conexion->query($consultacarrera);
+
+              while ($regCarrera = $resultadocarrera->fetch_array(MYSQLI_BOTH)) {
+              echo '<option value="' . $regCarrera['nombreCarrera'] . '">' . $regCarrera['nombreCarrera'] . '</option>';}
               ?>
-            </select></div>
+            </select>
+          </div>
 
             <div class="form-group">
               <select class="custom-select custom-select-sm " id="Uciclo" name="Uciclo">                          
                 <option value="">Asigne Ciclo</option>
-
                 <?php
-                            //    $consultaciclo = "SELECT * FROM ciclos";
-                            //    $resultadociclos = $conexion->query($consultaciclo);
-                            //    while ($regCiclos = $resultadociclos->fetch_array(MYSQLI_BOTH)){
-                            //   echo '<option value="' . $regCiclos['ciclo'] . '">' . $regCiclos['ciclo'] . '</option>';}
+                require 'conexion.php';
+                $consultaciclo = "SELECT * FROM ciclos";
+                $resultadociclos = $conexion->query($consultaciclo);
+                while ($regCiclos = $resultadociclos->fetch_array(MYSQLI_BOTH)){
+                echo '<option value="' . $regCiclos['ciclo'] . '">' . $regCiclos['ciclo'] . '</option>';}
                 ?>
-              </select></div>
+              </select>
+            </div>
 
               <div class="form-group">
                 <input type="email" name="Ucorreo"  class="form-control form-control-sm" id="Ucorreo" placeholder="e-mail" value="<?php echo $fila['Ucorreo']; ?>"></div>

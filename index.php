@@ -57,6 +57,7 @@ $ciclo_s = $filas[8];
      <!--Inicia Formulario-->
     <form action="registrar.php" method="POST" class="form-horizontal" name="formulario">
       <input type="text" name="ciclo" id="ciclo" value="<?php echo $filas[8]?>" hidden>
+      <input type="text" name="nstatus" value="si" hidden>
 
     <div class="row">
       <div class="form-group col-md-3">
@@ -214,10 +215,10 @@ $ciclo_s = $filas[8];
     <div class="form-group col-md-3 my-4">
       <label class="control-label">Titulado(a):</label>
       <label>
-        Si <input type="radio" name="titulado" value="1" id="titulado" class="control-label mx-4" >
+        Si <input type="radio" name="titulado" value="Si" id="titulado" class="control-label mx-4" >
       </label>
       <label class="radio-inline">
-        No <input type="radio" name="titulado" value="0" id="titulado" class="control-label mx-4" checked >
+        No <input type="radio" name="titulado" value="No" id="titulado" class="control-label mx-4" checked >
       </label>
     </div>
 
@@ -339,7 +340,7 @@ $ciclo_s = $filas[8];
 
         <div class="form-group">
           <label for="up3" class="control-label"><strong>III.3 Medio para obtener el empleo</strong></label><br>
-          <label>Bolsa de trabajo del plantel <input type="radio" name="up3" value="bolsa tec" id="up31" class="mx-3"></label>
+          <label>Bolsa de trabajo del plantel <input type="radio" name="up3" value="Bolsa ITSPP" id="up31" class="mx-3"></label>
           <label>Contactos personales<input type="radio" name="up3" value="Contactos" id="up32" class="mx-3"></label>
           <label>Residencia Profesional<input type="radio" name="up3" value="Residencias" id="up33" class="mx-3"></label>
           <label>Medios macivos de comunicacion<input type="radio" name="up3" value="Medios" id="up34" class="mx-3"></label>

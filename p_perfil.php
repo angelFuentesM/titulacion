@@ -5,12 +5,12 @@ if (isset($_POST['buscar'])) {
 $filtro = $_POST['ciclo'];
 
 //Consulta hombres en un ciclo//
-$con= "SELECT * FROM egresado WHERE sexo='M' AND ciclo= '$filtro'";
+$con= "SELECT * FROM egresado WHERE sexo='Masculino' AND ciclo= '$filtro'";
 $re = $conexion->query($con);
 $hombres = $re->num_rows;
 
 //Consulta mujeres en un ciclo
-$con1= "SELECT * FROM egresado WHERE sexo='F' AND ciclo= '$filtro'";
+$con1= "SELECT * FROM egresado WHERE sexo='Femenino' AND ciclo= '$filtro'";
 $re1 = $conexion->query($con1);
 $mujeres = $re1->num_rows;
 
@@ -21,22 +21,22 @@ $porm = $mujeres * 100 / $hm; //Porcentaje de mujeres en un ciclo
 $spor = $porh + $porm;
 
 //Consulta hombre no titulados en un ciclo//
-$con2= "SELECT * FROM egresado WHERE titulado= '0' AND sexo='M' AND ciclo= '$filtro'";
+$con2= "SELECT * FROM egresado WHERE titulado= 'No' AND sexo='Masculino' AND ciclo= '$filtro'";
 $re2 = $conexion->query($con2);
 $hnt = $re2->num_rows;
 
 //Consulta hombres titulados en un ciclo//
-$con3= "SELECT * FROM egresado WHERE sexo='M' AND titulado='1' AND ciclo= '$filtro'";
+$con3= "SELECT * FROM egresado WHERE sexo='Masculino' AND titulado='Si' AND ciclo= '$filtro'";
 $re3 = $conexion->query($con3);
 $ht = $re3->num_rows;
 
 //Consulta mujeres tituladas en un ciclo//
-$con4= "SELECT * FROM egresado WHERE sexo='F' AND titulado='1' AND ciclo= '$filtro'";
+$con4= "SELECT * FROM egresado WHERE sexo='Femenino' AND titulado='No' AND ciclo= '$filtro'";
 $re4 = $conexion->query($con4);
 $mt = $re4->num_rows;
 
 //Consulta mujeres no tituladas en un ciclo//
-$con5= "SELECT * FROM egresado WHERE sexo='F' AND titulado='0' AND ciclo= '$filtro'";
+$con5= "SELECT * FROM egresado WHERE sexo='Femenino' AND titulado='No' AND ciclo= '$filtro'";
 $re5 = $conexion->query($con5);
 $mnt = $re5->num_rows;
 

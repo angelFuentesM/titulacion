@@ -130,12 +130,7 @@ require 'conexion.php';
 
                   <tr>
                     <th scope="col">Nombre</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col">e-mail</th>
-                    <th scope="col"></th>
+                    <th scope="col">e-mail</th>                    
                     <th scope="col">Acciones</th>
                   </tr>
                 </thead>
@@ -152,16 +147,12 @@ require 'conexion.php';
                      ?>
 
                       <tr>
-                        <td><?php echo $mostrarusuarios['Upaterno']; ?></td>
-                        <td><?php echo $mostrarusuarios['Umaterno']; ?></td>
-                        <td><?php echo $mostrarusuarios['Unombre']; ?></td>
-                        <td><?//php echo $mostrarusuarios['nucontrol']; ?></td>
-                        <td><?//php echo $mostrarusuarios['Ucarrera']; ?></td>
-                        <td><?php echo $mostrarusuarios['Ucorreo']; ?></td>
-                        <td><?//php echo $mostrarusuarios['Uciclo']; ?></td>
+                        <td><?php echo $mostrarusuarios['Upaterno']."  ".$mostrarusuarios['Umaterno']."  ".$mostrarusuarios['Unombre']; ?></td>                        
+                        <td><?php echo $mostrarusuarios['Ucorreo']; ?></td>                        
                         <td>
                           <span  class="modificar" style=" color:green; cursor: pointer;" id="<?php echo $mostrarusuarios['usuariosId']; ?>">Editar
                           </span >
+                          |
                           <span class="eliminar" style="color:red; cursor: pointer;" id="<?php echo $mostrarusuarios['usuariosId']; ?>">Borrar
                           </span>
                         </td>

@@ -22,9 +22,8 @@ require 'conexion.php';
     <header>
       <div class="logo">
         <img src="imagenes/bannerb.png" width="1024" class="logo">
-      </div>
-    </header>
-  </div>
+      </div>    
+    </div>
 
   <div class="container">
 
@@ -37,10 +36,12 @@ require 'conexion.php';
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+
           <li class="nav-item active">
             <a class="nav-link active" href="Ad_egresados.php">Egresados <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+
+          <li class="nav-item ">
             <a class="nav-link" href="Ad_admon.php">Administrador</a>
           </li>
 
@@ -74,7 +75,9 @@ require 'conexion.php';
       </div>
     </nav>
   </div>
+  </header>
   <br>
+
   <!-- Termina Barra de Navegacion-->
 
   <!--contenedor general-->
@@ -90,6 +93,7 @@ require 'conexion.php';
             <form action="re_egresados.php" method="POST" class="form-horizontal" id="guardar">
               <input type="text" value="guardar" name="opc" hidden>
               <input type="text" value="1" name="privilegio" hidden>
+              <input type="text" value="no" name="status" hidden>
 
               <div class="row iconprint">
                 <div class="form-group col-md-3">
@@ -193,6 +197,7 @@ require 'conexion.php';
                     <td>
                       <span  class="modificar" style=" color:green; cursor: pointer;" id="<?php echo $mostrarusuarios['usuariosId']; ?>">Editar
                       </span >
+                      |
                       <span class="eliminar" style="color:red; cursor: pointer;" id="<?php echo $mostrarusuarios['usuariosId']; ?>">Borrar
                       </span>
                     </td>

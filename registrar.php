@@ -1,4 +1,5 @@
 <?php
+$nstatus = $_POST['nstatus'] ;
 $paterno = $_POST['paterno'] ;
 $materno = $_POST['materno'];
 $nombre  = $_POST['nombre'];
@@ -93,6 +94,10 @@ $up61 = $_POST['up61'];
   $puesto = $_POST['puesto'];
 
   require('conexion.php');
+
+   ///Modificacion de status///
+    $mod = "UPDATE usuarios SET status = '$nstatus' WHERE nucontrol = '$control' ";
+    mysqli_query($conexion, $mod);
  
   //consulta para insertar
    $insertar1 = "INSERT INTO egresado SET paterno='$paterno',materno='$materno',nombre='$nombre',control='$control',
@@ -136,6 +141,8 @@ $up61 = $_POST['up61'];
 
      $insertar9 = "INSERT INTO empresa SET egresadoId='$egresadoId', giro='$giro', girob='$girob', razonSocial ='$razonSocial', domicilioE='$domicilioE', coloniaE='$coloniaE', postalE ='$postalE', municipioE ='$municipioE',  estadoE ='$estadoE', telefonoE ='$telefonoE', extencion ='$extencion', correoE ='$correoE', web ='$web', jefe ='$jefe', puesto ='$puesto'";
      mysqli_query($conexion,$insertar9);
+
+    
 
     header("refresh:0; url=cerrar_s.php");     
     echo '<script language="javascript">alert("FORMULARIO ENVIADO, MUCHAS GRACIAS POR TU GENTIL COLABORACION");</script>';

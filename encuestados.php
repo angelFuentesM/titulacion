@@ -45,7 +45,7 @@ require 'conexion.php';
             <a class="nav-link" href="Ad_egresados.php">Egresados <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="Ad_admon.php">Administrador</a>
+            <a class="nav-link" href="Ad_admon.php">Administrador</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Ad_ciclos.php">Ciclos</a>
@@ -66,7 +66,7 @@ require 'conexion.php';
               <a class="dropdown-item" href="p_desempeno.php">III. Desempeño profesional</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="form_ind.php">Formularios</a>
-              <a class="dropdown-item" href="encuestados.php">Encuestados</a>
+              <a class="dropdown-item" href="encuestados.php" active >Encuestados</a>
             </div>
           </li>
 
@@ -98,7 +98,7 @@ require 'conexion.php';
 
      <div class="col-6">
 
-      <p>Egresados a los que se le envio el formulario en el ciclo:<i><?php echo " "."$filtro";?></i></p>
+      <p>Egresados a los que se le envio el formulario en el ciclo:<b><i><?php echo " "."$filtro";?></i></b></p>
 
       <table>
         <thead> 
@@ -143,7 +143,7 @@ require 'conexion.php';
 
   <div class="col-6">
 
-      <p>Egresados que respondieron el formulario en el ciclo:<i><?php echo  " "."$filtro";?></i></p>
+      <p>Egresados que no han respondido el formulario en el ciclo:<b><i><?php echo  " "."$filtro";?></i></b></p>
 
       <table>
         <thead> 
@@ -159,7 +159,7 @@ require 'conexion.php';
 
        try {
 
-         $query = "SELECT * FROM egresado WHERE ciclo = '$filtro'";
+         $query = "SELECT * FROM usuarios WHERE status= 'no' AND Uciclo = '$filtro'";
          $result = $conexion->query($query);  
          $j=1;       
          while ($row = $result->fetch_array(MYSQLI_BOTH)) { 
@@ -167,7 +167,7 @@ require 'conexion.php';
           
           <tr>  
             <td><?php echo $j++;?></td>                   
-            <td><?php echo $row[3]."  ".$row[4]."  ".$row[2];?></td>        
+            <td><?php echo $row[2]."  ".$row[3]."  ".$row[4];?></td>        
             <td><?php echo $row[1];?></td>                         
           </tr>
 
