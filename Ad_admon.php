@@ -150,11 +150,11 @@ require 'conexion.php';
                         <td><?php echo $mostrarusuarios['Upaterno']."  ".$mostrarusuarios['Umaterno']."  ".$mostrarusuarios['Unombre']; ?></td>                        
                         <td><?php echo $mostrarusuarios['Ucorreo']; ?></td>                        
                         <td>
-                          <span  class="modificar" style=" color:green; cursor: pointer;" id="<?php echo $mostrarusuarios['usuariosId']; ?>">Editar
+                          <span  class="modificar icon-write" style=" color:#2DBDA8; cursor: pointer;" id="<?php echo $mostrarusuarios['usuariosId']; ?>">Editar
                           </span >
                           |
-                          <span class="eliminar" style="color:red; cursor: pointer;" id="<?php echo $mostrarusuarios['usuariosId']; ?>">Borrar
-                          </span>
+                          <span class="eliminar icon-cross" style="color:red; cursor: pointer;" id="<?php echo $mostrarusuarios['usuariosId']; ?>">Borrar
+                          </span>                         
                         </td>
                       </tr>
 

@@ -123,7 +123,7 @@ require 'conexion.php';
                       <td><?php echo $i++; ?></td>
                       <td><?php echo $mostrarusuarios['ciclo']; ?></td>
                       <td>
-                        <span  class="modificar" style=" color:green; cursor: pointer;" id="<?php echo $mostrarusuarios['cicloId']; ?>">Editar
+                        <span  class="modificar icon-write" style=" color:#2DBDA8; cursor: pointer;" id="<?php echo $mostrarusuarios['cicloId']; ?>">Editar
                         </span >
                         |
                         <span class="eliminar" style="color:red; cursor: pointer;" id="<?php echo $mostrarusuarios['cicloId']; ?>">Borrar

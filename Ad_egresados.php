@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_NOTICE);
 require 'conexion.php';
 ?>
 
@@ -94,6 +95,7 @@ require 'conexion.php';
               <input type="text" value="guardar" name="opc" hidden>
               <input type="text" value="1" name="privilegio" hidden>
               <input type="text" value="no" name="status" hidden>
+              <input type="text" value="No" name="statusCorreo" hidden>
 
               <div class="row iconprint">
                 <div class="form-group col-md-3">
@@ -195,12 +197,14 @@ require 'conexion.php';
                     <td><?php echo $mostrarusuarios['Ucorreo']; ?></td>
                     <td><?php echo $mostrarusuarios['Uciclo']; ?></td>
                     <td>
-                      <span  class="modificar" style=" color:green; cursor: pointer;" id="<?php echo $mostrarusuarios['usuariosId']; ?>">Editar
+                      <span  class="modificar icon-write" style=" color:#2DBDA8; cursor: pointer;" id="<?php echo $mostrarusuarios['usuariosId']; ?>">
                       </span >
                       |
-                      <span class="eliminar" style="color:red; cursor: pointer;" id="<?php echo $mostrarusuarios['usuariosId']; ?>">Borrar
+                      <span class="eliminar icon-cross" style="color:red; cursor: pointer;" id="<?php echo $mostrarusuarios['usuariosId']; ?>">
                       </span>
+                      
                     </td>
+
                   </tr>
 
                   <?php

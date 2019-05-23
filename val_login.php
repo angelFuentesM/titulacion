@@ -25,14 +25,14 @@ $_SESSION['nucontrol']= $_POST['nucontrol'];
 	$rows = mysqli_fetch_array($result, MYSQLI_NUM);
 	
 	if ($rows > 1) {
-		header("refresh:5; url=login.php");     
+		header("refresh:9; url=login.php");     
     echo " <br>
     <div class='container'>
     <div class='row align-items-center'>
     <div class='col-md-6 offset-md-3'>
-    <div class='alert alert-warning' role='alert'>
-    <h4 class='alert-heading'>Hola nuevamente!</h4>
-    <p>Tenemos almacenado un registro con el formulario ya contestado</p>
+    <div class='alert alert-danger' role='alert'>
+    <h4 class='alert-heading'>Hola de nuevo, $rows[2]!</h4>
+    <p>Tenemos almacenado un registro con los datos del formulario ya contestado, por el momento solo requerimos esa informacion, Gracias. </p>
     <hr>
     <p class='mb-0'>Esta pagina se reedireccionara automaticamente.</p>
     </div> 	

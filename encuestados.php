@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_NOTICE);
 require 'conexion.php';
 
   if (isset($_POST['buscar'])) {      
@@ -98,15 +99,17 @@ require 'conexion.php';
 
      <div class="col-6">
 
-      <p>Egresados a los que se le envio el formulario en el ciclo:<b><i><?php echo " "."$filtro";?></i></b></p>
+      <p>Egresados del ciclo:<b><i><?php echo " "."$filtro";?></i></b></p>
 
       <table>
         <thead> 
          <tr>
            <th scope="col">No. </th>                       
-           <div class="col-4"><th scope="col">Nombre del egresado</th></div>                       
-           <div class="col-4"><th scope="col">No. de control</th></div>                       
-           <div class="col-4"><th scope="col">Correo</th></div>                       
+           <div class="col-4"><th scope="col">Nombre del egresado</th></div>                   
+           <div class="col-4"><th scope="col">Control</th></div>                       
+           <div class="col-4"><th scope="col">Correo Enviado?</th></div>                       
+           <div class="col-4"><th scope="col"></th></div>                       
+           <div class="col-4"><th scope="col">Send</th></div>                       
          </tr>
        </thead>
 
@@ -114,7 +117,7 @@ require 'conexion.php';
 
        try {
 
-         $query = "SELECT * FROM usuarios WHERE Uciclo = '$filtro'";
+         $query = "SELECT * FROM usuarios WHERE Uciclo = '$filtro' AND privilegio=1";
          $result = $conexion->query($query);
          $i=1;         
          while ($row = $result->fetch_array(MYSQLI_BOTH)) { 
@@ -123,9 +126,14 @@ require 'conexion.php';
           
           <tr>      
             <td><?php echo $i++;?></td>     
-            <td><?php echo $row['Upaterno']."  ".$row['Umaterno']."  ".$row['Unombre'];?></td>        
+            <td><?php echo $row['Upaterno']."  ".$row['Umaterno']."  ".$row['Unombre'];?></td>
             <td><?php echo $row['nucontrol'];?></td>                         
-            <td><?php echo $row['Ucorreo'];?></td>         
+            <td><?php echo $row['Ucorreo'];?></td>
+            <td><?php echo $row['statusCorreo'];?></td>
+            <td>
+            <span  class="correo icon-envelope" style="text-align:right; color:#33C1FF; cursor: pointer;" id="<?php echo $row['Ucorreo'];?>">
+            </span >                                           
+            </td>         
           </tr>
 
         
@@ -159,7 +167,7 @@ require 'conexion.php';
 
        try {
 
-         $query = "SELECT * FROM usuarios WHERE status= 'no' AND Uciclo = '$filtro'";
+         $query = "SELECT * FROM usuarios WHERE status= 'no' AND Uciclo = '$filtro' AND privilegio=1";
          $result = $conexion->query($query);  
          $j=1;       
          while ($row = $result->fetch_array(MYSQLI_BOTH)) { 
@@ -196,6 +204,21 @@ require 'conexion.php';
 <script src="js/valores.js"></script>
 <script src="js/ocultar.js"></script>
 <script src="js/solonumero.js"></script>
+<script>
+  $(".correo").click(function(){
+  var clave = $(this).attr("id");
+alert(clave)
+  $.ajax({
+    url : "correo.php",
+    data : "opc=correo&clave="+clave,
+    type : "POST",
+    success: function()
+    {
+      location.reload();
+    }
+  })
+});
+</script>
 
 </body>
 </html>

@@ -1,4 +1,6 @@
 <?php
+
+error_reporting(E_ALL ^ E_NOTICE);
 require 'conexion.php';
 
 if (isset($_POST['buscar'])) {

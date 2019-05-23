@@ -8,8 +8,8 @@ switch ("$_POST[opc]") {
 
   try {
 
-    $sql = $conexion->prepare ("INSERT INTO usuarios(Upaterno,Umaterno,Unombre,nucontrol,Ucarrera,Ucorreo,privilegio,Uciclo,status)
-      VALUES('".$_POST['Upaterno']."','".$_POST['Umaterno']."','".$_POST['Unombre']."','".$_POST['nucontrol']."','".$_POST['Ucarrera']."','".$_POST['Ucorreo']."','".$_POST['privilegio']."','".$_POST['Uciclo']."','".$_POST['status']."')");        
+    $sql = $conexion->prepare ("INSERT INTO usuarios(Upaterno,Umaterno,Unombre,nucontrol,Ucarrera,Ucorreo,privilegio,Uciclo,status,statusCorreo)
+      VALUES('".$_POST['Upaterno']."','".$_POST['Umaterno']."','".$_POST['Unombre']."','".$_POST['nucontrol']."','".$_POST['Ucarrera']."','".$_POST['Ucorreo']."','".$_POST['privilegio']."','".$_POST['Uciclo']."','".$_POST['status']."','".$_POST['statusCorreo']."')");        
     $sql->execute();   
 
     header("location:Ad_egresados.php"); 
@@ -118,4 +118,9 @@ switch ("$_POST[opc]") {
           }
           break;
         }
+
+
+
+
+        
         ?>

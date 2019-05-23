@@ -126,7 +126,7 @@ require 'conexion.php';
                       <td><?php echo $mostrarusuarios['nombreCarrera']; ?></td>
                       
                       <td>
-                        <span  class="modificar" style=" color:green; cursor: pointer;" id="<?php echo $mostrarusuarios['IdCarrera']; ?>">Editar
+                        <span  class="modificar icon-write" style=" color:#2DBDA8; cursor: pointer;" id="<?php echo $mostrarusuarios['IdCarrera']; ?>">Editar
                         </span >
                         |
                         <span class="eliminar" style="color:red; cursor: pointer;" id="<?php echo $mostrarusuarios['IdCarrera']; ?>">Borrar
@@ -181,6 +181,7 @@ require 'conexion.php';
 
    $(".eliminar").click(function(){
     var clave = $(this).attr("id");
+    alert(clave)
     $.ajax({
       url : "reg_carrera.php",
       data : "opc=eliminar&clave="+clave,

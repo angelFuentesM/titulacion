@@ -7,7 +7,7 @@ switch ("$_POST[opc]") {
 
   try {
 
-    $sql = $conexion->prepare ("INSERT INTO ciclos(ciclo)
+    $sql = $conexion->prepare ("INSERT INTO ciclos (ciclo)
       VALUES('".$_POST['ciclo']."')");        
     $sql->execute();   
 
