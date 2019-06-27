@@ -37,16 +37,16 @@ require 'conexion.php';
           <li class="nav-item ">
             <a class="nav-link" href="Ad_egresados.php">Egresados <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="Ad_admon.php">Administrador</a>
+          <li class="nav-item active">
+            <a class="nav-link active " href="Ad_admon.php">Administrador</a>
+          </li>
+
+          <li class="nav-item" >
+            <a class="nav-link" href="Ad_ciclos.php " >Ciclos</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="Ad_ciclos.php">Ciclos</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="Ad_carrera.php">Carrera</a>
+            <a class="nav-link " href="Ad_carrera.php"  >Carrera</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -60,14 +60,12 @@ require 'conexion.php';
               <a class="dropdown-item" href="p_desempeno.php">III. Desempeño profesional</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="form_ind.php">Formularios</a>
-              <a class="dropdown-item" href="encuestados.php">Encuestados</a>             
+              <a class="dropdown-item" href="encuestados.php">Encuestados</a>
             </div>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="cerrar_s.php">Cerrar secion</a>
           </li>
-          
         </ul>
       </div>
     </nav>

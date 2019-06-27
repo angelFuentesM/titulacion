@@ -46,7 +46,7 @@ switch ("$_POST[opc]") {
       <input type="text" value="<?php echo $_POST['clave']?>" name="clave" hidden>
 
       <div class="form-group">
-        <input type="text" name="nombreCarrera" class="form-control form-control-sm" id="nombreCarrera" placeholder="Modifica ciclo"value="<?php echo $fila['nombreCarrera']; ?>" required>
+        <input type="text" name="nombreCarrera" class="form-control form-control-sm" id="nombreCarrera" placeholder="Modifica carrera"value="<?php echo $fila['nombreCarrera']; ?>" required>
       </div>           
 
       <div class="form-group">

@@ -85,13 +85,13 @@ $ciclo_s = $filas[8];
     <div class="row">
       <div class="form-group col-md-3">
         <label for="fecha" class="control-label">Fecha de Nacimiento:</label>
-        <input type="date" name="fecha" class="form-control form-control-sm" id="fecha">
+        <input type="date" name="fecha" class="form-control form-control-sm" id="fecha" >
       </div>
 
 
       <div class="form-group col-md-3">
         <label for="curp" class="control-label">CURP:</label>
-        <input type="text" name="curp" class="form-control form-control-sm" id="curp" placeholder="CURP" >
+        <input type="text" name="curp" class="form-control form-control-sm" id="curp" placeholder="CURP">
       </div>
 
       <div class="form-group col-md-6 my-4">

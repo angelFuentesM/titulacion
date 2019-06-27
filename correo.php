@@ -73,6 +73,9 @@ te solicita a ti egresado de esta institucion a participar en la aplicacion
 del formulario de contacto y seguimiento, agredeciendo entres al enlace abajo 
 proporcionado, llenes el formulario y lo envies a la brevedad posible, <b>Gracias!</b>
 <br>
+<p> <i>NOTA: Para inicio de sesion es requerido</i></p>
+<b>Usuario:</b>   correo electronico <br>
+<b>Password:</b>  Numero de control <br>
 <a href="http://localhost/formulario/login.php" class="button">Ir al formulario</a>';
     
 
